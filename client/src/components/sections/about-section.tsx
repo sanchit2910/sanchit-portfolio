@@ -10,7 +10,7 @@ export default function AboutSection() {
             {/* Profile Picture */}
             <div className="flex-shrink-0">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200" 
+                src="@assets/profile4_1757194160828.jpg"
                 alt="Sanchit Khandelwal - Android Developer" 
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background"
                 data-testid="about-profile-image"
@@ -33,7 +33,11 @@ export default function AboutSection() {
               </div>
 
               <p className="text-muted-foreground leading-relaxed max-w-2xl" data-testid="about-description">
-                A passionate and experienced Android Developer with a knack for building beautiful, functional, and user-friendly mobile applications.
+                An Android Developer with 4+ years of experience building user-friendly and reliable mobile applications. Experienced in delivering impactful solutions across transport, booking, and enterprise domains with a strong focus on performance and usability.
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed max-w-2xl" data-testid="about-description-2">
+                Thrives in collaborative environments, adapts quickly to challenges, and enjoys turning ideas into applications that create real value.
               </p>
 
               <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
