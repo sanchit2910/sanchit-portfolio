@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Download, Linkedin } from "lucide-react";
+import { MapPin, Download } from "lucide-react";
+import profileImage from "@assets/profile4_1757194160828.jpg";
 
 export default function AboutSection() {
   return (
@@ -10,7 +11,7 @@ export default function AboutSection() {
             {/* Profile Picture */}
             <div className="flex-shrink-0">
               <img 
-                src="@assets/profile4_1757194160828.jpg"
+                src={profileImage}
                 alt="Sanchit Khandelwal - Android Developer" 
                 className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background"
                 data-testid="about-profile-image"
@@ -40,16 +41,7 @@ export default function AboutSection() {
                 Thrives in collaborative environments, adapts quickly to challenges, and enjoys turning ideas into applications that create real value.
               </p>
 
-              <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
-                <Button 
-                  variant="outline" 
-                  className="inline-flex items-center space-x-2 border-border hover:bg-muted" 
-                  data-testid="button-linkedin"
-                >
-                  <Linkedin className="w-4 h-4" />
-                  <span>LinkedIn</span>
-                </Button>
-                
+              <div className="pt-4">
                 <Button 
                   variant="outline" 
                   className="inline-flex items-center space-x-2 border-border hover:bg-muted" 
