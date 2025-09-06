@@ -1,56 +1,61 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Download, ExternalLink } from "lucide-react";
+import { MapPin, Download, Linkedin } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-secondary/30">
+    <section id="about" className="py-20 bg-card">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4" data-testid="about-title">About Me</h2>
-          <p className="text-muted-foreground text-lg" data-testid="about-subtitle">Get to know the developer behind the code</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-lg text-foreground leading-relaxed" data-testid="about-description-1">
-              I'm a passionate Android Developer with 4+ years of experience building robust, scalable mobile applications. 
-              Based in Jaipur, India, I specialize in modern Android development using Kotlin, MVVM architecture, 
-              and cutting-edge technologies like Firebase and API integration.
-            </p>
-            <p className="text-lg text-foreground leading-relaxed" data-testid="about-description-2">
-              My journey in software development has taken me through various domains, from transport management 
-              systems to refer-and-earn applications, always with a focus on clean code, user experience, 
-              and performance optimization.
-            </p>
-
-            <div className="flex items-center space-x-4 text-muted-foreground" data-testid="location-info">
-              <MapPin className="w-5 h-5" />
-              <span>Jaipur, India</span>
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+            {/* Profile Picture */}
+            <div className="flex-shrink-0">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200" 
+                alt="Sanchit Khandelwal - Android Developer" 
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-background"
+                data-testid="about-profile-image"
+              />
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <Button asChild className="inline-flex items-center space-x-2" data-testid="button-linkedin">
-                <a href="https://linkedin.com/in/sanchit-khandelwal" target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="w-5 h-5" />
-                  <span>LinkedIn Profile</span>
-                </a>
-              </Button>
+            {/* Content */}
+            <div className="flex-1 text-center md:text-left space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-card-foreground" data-testid="about-name">
+                Sanchit Khandelwal
+              </h2>
               
-              <Button variant="outline" className="inline-flex items-center space-x-2" data-testid="button-resume">
-                <Download className="w-5 h-5" />
-                <span>Download Resume</span>
-              </Button>
-            </div>
-          </div>
+              <p className="text-muted-foreground text-lg font-medium" data-testid="about-role">
+                Android Developer
+              </p>
 
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Professional developer workspace with multiple monitors and coding setup" 
-              className="rounded-2xl shadow-2xl w-full h-auto"
-              data-testid="about-image"
-            />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl"></div>
+              <div className="flex items-center justify-center md:justify-start space-x-2 text-muted-foreground" data-testid="location-info">
+                <MapPin className="w-4 h-4" />
+                <span>Jaipur, India</span>
+              </div>
+
+              <p className="text-muted-foreground leading-relaxed max-w-2xl" data-testid="about-description">
+                A passionate and experienced Android Developer with a knack for building beautiful, functional, and user-friendly mobile applications.
+              </p>
+
+              <div className="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                <Button 
+                  variant="outline" 
+                  className="inline-flex items-center space-x-2 border-border hover:bg-muted" 
+                  data-testid="button-linkedin"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>LinkedIn</span>
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  className="inline-flex items-center space-x-2 border-border hover:bg-muted" 
+                  data-testid="button-resume"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Download Resume</span>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
