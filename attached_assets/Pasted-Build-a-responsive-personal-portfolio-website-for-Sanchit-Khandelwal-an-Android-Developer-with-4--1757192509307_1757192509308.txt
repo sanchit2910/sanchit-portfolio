@@ -1,0 +1,54 @@
+Build a responsive personal portfolio website for "Sanchit Khandelwal", an Android Developer with 4+ years of experience. 
+
+The website should have the following sections:
+
+1. **Header / Navigation**  
+   - Name: "Sanchit Khandelwal"  
+   - Navigation links: Home, About, Skills, Experience, Projects, Apps, Contact  
+
+2. **Home Section**  
+   - A professional hero section with my name, title ("Android Developer | Kotlin | MVVM | Firebase | API Integration | Google Maps"), and a call-to-action button ("View My Work").  
+   - Add a clean modern design with subtle animations.  
+
+3. **About Section**  
+   - Short introduction (from my resume).  
+   - Location: Jaipur, India  
+   - Links to my LinkedIn profile and resume download (PDF).  
+
+4. **Skills Section**  
+   - List my skills: Android (Kotlin, Java), Firebase, Android SDK, API Integration, Angular, ASP.NET MVC, MS SQL Server.  
+   - Display as attractive icons or cards.  
+
+5. **Experience Section**  
+   - Timeline format of my work experience:  
+     - **Tailored Solutions Pvt Ltd** (Jul 2023 – Present) – Junior Android Developer  
+     - **Jaya IT Solutions Pvt Ltd** (Jun 2022 – Jun 2023) – Software Developer  
+     - **Finance Lookup Advisor** (Aug 2021 – Jun 2022) – Intern Android Developer  
+
+6. **Projects Section**  
+   - Highlight key projects:  
+     - **GMDC PARIVAHAN** – Kotlin-based transport management application.  
+     - **Referr** – Refer-and-earn Android app (Java + Firebase).  
+
+7. **Apps Section (Play Store)**  
+   - A dedicated section where I can showcase my published apps with:  
+     - App name  
+     - Description  
+     - Play Store link  
+     - App icon/image  
+   - The design should support adding more apps dynamically.  
+
+8. **Contact Section**  
+   - Contact details: Email (khandelwalsanchu2910@gmail.com), Phone (9079751269).  
+   - Contact form (Name, Email, Message).  
+
+9. **Footer**  
+   - Links to LinkedIn and email.  
+   - Copyright text.  
+
+**Design Guidelines:**  
+- Modern, clean, and mobile-friendly (use HTML, CSS, and JavaScript).  
+- Smooth scrolling navigation.  
+- Light/Dark theme toggle option.  
+
+Make sure the code is well-structured and easy to update in the future.
