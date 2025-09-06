@@ -19,9 +19,9 @@ export default function HeroSection() {
           
           {/* Main Title */}
           <h1 className="hero-title text-6xl md:text-8xl lg:text-9xl text-white mb-4" data-testid="hero-title">
-            I'm <span className="gradient-text">Sanchit</span>
+            I'm <span className="text-white">Sanchit</span>
             <br />
-            <span className="gradient-text">Khandelwal</span>.
+            <span className="text-white">Khandelwal</span>.
           </h1>
           
           {/* Subtitle */}
