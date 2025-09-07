@@ -10,7 +10,7 @@ export default function Footer() {
               Sanchit Khandelwal
             </div>
             <p className="text-muted-foreground" data-testid="footer-tagline">
-              Android Developer | Building the future one app at a time
+              Android Developer | Skilled in developing robust Android applications
             </p>
           </div>
 

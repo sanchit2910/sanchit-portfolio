@@ -5,7 +5,7 @@ const experiences = [
     title: "Junior Android Developer",
     company: "Tailored Solutions Pvt Ltd",
     period: "Jul 2023 – Present",
-    description: "Leading Android development initiatives, implementing MVVM architecture patterns, and integrating complex APIs for enterprise-level applications. Working with modern Android technologies including Kotlin, Firebase, and Google Maps integration.",
+    description: "Led Android app development for asset management, delivering efficient, high-performance solutions. Implemented offline functionality with Room Database, enhancing user experience. Developed lightweight apps focusing on performance and resource efficiency. Collaborated with cross-functional teams for seamless integration and timely project delivery.",
     icon: Circle,
     color: "primary"
   },
@@ -13,7 +13,7 @@ const experiences = [
     title: "Software Developer", 
     company: "Jaya IT Solutions Pvt Ltd",
     period: "Jun 2022 – Jun 2023",
-    description: "Developed full-stack applications using Angular and ASP.NET MVC, designed and optimized SQL Server databases, and collaborated with cross-functional teams to deliver high-quality software solutions.",
+    description: "Built Android apps for cab and bus booking using MVVM architecture. Integrated APIs and Google Maps for location-based services. Expanded skill set by learning Angular and contributing to utility web applications. Contributed to web development using Angular and .NET. Managed databases using MS SQL Server for reliable backend operations.",
     icon: Star,
     color: "accent"
   },
@@ -21,7 +21,7 @@ const experiences = [
     title: "Intern Android Developer",
     company: "Finance Lookup Advisor", 
     period: "Aug 2021 – Jun 2022",
-    description: "Started my Android development journey, learning core concepts of mobile application development, Java programming, and Android SDK. Contributed to various projects and gained hands-on experience in the software development lifecycle.",
+    description: "Developed a refer-and-earn Android app using Java and Firebase. Implemented secure user authentication with Firebase Authentication. Gained hands-on experience in mobile app development and problem-solving.",
     icon: Zap,
     color: "secondary"
   }

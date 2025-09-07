@@ -34,11 +34,7 @@ export default function AboutSection() {
               </div>
 
               <p className="text-muted-foreground leading-relaxed max-w-2xl" data-testid="about-description">
-                An Android Developer with 4+ years of experience building user-friendly and reliable mobile applications. Experienced in delivering impactful solutions across transport, booking, and enterprise domains with a strong focus on performance and usability.
-              </p>
-              
-              <p className="text-muted-foreground leading-relaxed max-w-2xl" data-testid="about-description-2">
-                Thrives in collaborative environments, adapts quickly to challenges, and enjoys turning ideas into applications that create real value.
+                A skilled Android Developer with a diploma in Software Engineering and over three years of professional experience. Proficient in developing robust Android applications, leveraging cutting-edge technologies to deliver high-quality solutions.
               </p>
 
               <div className="pt-4">

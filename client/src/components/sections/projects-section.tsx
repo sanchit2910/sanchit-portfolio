@@ -5,20 +5,20 @@ import { ExternalLink } from "lucide-react";
 const projects = [
   {
     title: "GMDC PARIVAHAN",
-    description: "A comprehensive transport management application built with Kotlin, featuring real-time tracking, route optimization, and driver management. Implements MVVM architecture with Firebase backend and Google Maps integration for seamless transportation operations.",
+    description: "Developed a comprehensive transport management application using Kotlin, designed to streamline vehicle allotment and operations for GMDC employees, guests, drivers, and administrators. Collaborated with a cross-functional team to integrate APIs for real-time vehicle availability, booking, and driver attendance. Key features include guest transportation, cost management, maintenance scheduling, and detailed efficiency metrics, enhancing transparency and operational efficiency.",
     image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    imageAlt: "Android development environment with code editor and mobile device testing",
+    imageAlt: "Transport management application showing vehicle tracking and booking interface",
     primaryTech: "Kotlin",
-    technologies: ["Kotlin", "MVVM", "Firebase", "Google Maps"],
+    technologies: ["Kotlin", "API Integration", "Real-time Tracking", "Cost Management"],
     color: "primary"
   },
   {
     title: "Referr",
-    description: "An innovative refer-and-earn Android application developed with Java and Firebase. Features include user authentication, reward tracking, social sharing, and real-time analytics. Designed to maximize user engagement through gamification and referral incentives.",
+    description: "Developed an Android application based on a refer and earn platform, demonstrating proficiency in Java programming and utilizing Firebase as the backend platform. Built during internship period with focus on user authentication, referral tracking, and secure data management.",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    imageAlt: "Mobile app development showing referral and reward system interface",
+    imageAlt: "Refer and earn mobile application showing reward system interface",
     primaryTech: "Java",
-    technologies: ["Java", "Firebase", "Authentication", "Analytics"],
+    technologies: ["Java", "Firebase", "Authentication", "Referral System"],
     color: "accent"
   }
 ];

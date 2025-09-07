@@ -27,7 +27,7 @@ export default function HeroSection() {
           
           {/* Subtitle */}
           <p className="hero-subtitle text-gray-300 text-sm md:text-base tracking-widest max-w-2xl mx-auto" data-testid="hero-subtitle">
-            ANDROID DEVELOPER | KOTLIN | MVVM | FIREBASE | API INTEGRATION
+            ANDROID DEVELOPER | KOTLIN | JAVA | FIREBASE | ANDROID SDK | API INTEGRATION
           </p>
           
           {/* Call to Action Button */}
