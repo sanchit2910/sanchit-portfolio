@@ -10,23 +10,23 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex flex-col items-center justify-center hero-dark-background">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center hero-background">
       <div className="hero-content container mx-auto px-4 text-center flex-1 flex flex-col justify-center">
         <div className="animate-fade-in space-y-6">
           {/* Greeting */}
-          <div className="hero-greeting text-pink-500 text-lg md:text-xl font-semibold tracking-wider" data-testid="hero-greeting">
+          <div className="hero-greeting text-primary text-lg md:text-xl font-semibold tracking-wider" data-testid="hero-greeting">
             HELLO, WORLD.
           </div>
           
           {/* Main Title */}
-          <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight" data-testid="hero-title">
+          <h1 className="hero-title text-5xl md:text-7xl lg:text-8xl text-foreground font-bold leading-tight" data-testid="hero-title">
             I'm Sanchit
             <br />
             Khandelwal.
           </h1>
           
           {/* Subtitle */}
-          <p className="hero-subtitle text-gray-300 text-sm md:text-base tracking-widest max-w-2xl mx-auto" data-testid="hero-subtitle">
+          <p className="hero-subtitle text-muted-foreground text-sm md:text-base tracking-widest max-w-2xl mx-auto" data-testid="hero-subtitle">
             ANDROID DEVELOPER | KOTLIN | JAVA | MVVM | JETPACK | API INTEGRATION
           </p>
           
@@ -35,7 +35,7 @@ export default function HeroSection() {
             <Button
               variant="outline"
               onClick={scrollToAbout}
-              className="border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white px-8 py-3 rounded-none text-sm font-semibold tracking-wider transition-all uppercase"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-none text-sm font-semibold tracking-wider transition-all uppercase"
               data-testid="button-more-about-me"
             >
               MORE ABOUT ME
@@ -51,7 +51,7 @@ export default function HeroSection() {
           href="https://linkedin.com/in/sanchit-khandelwal" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-pink-500 transition-colors"
+          className="text-muted-foreground hover:text-primary transition-colors"
           data-testid="social-linkedin"
         >
           <Linkedin className="w-6 h-6" />
@@ -60,7 +60,7 @@ export default function HeroSection() {
           href="https://github.com/sanchit-khandelwal" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-pink-500 transition-colors"
+          className="text-muted-foreground hover:text-primary transition-colors"
           data-testid="social-github"
         >
           <Github className="w-6 h-6" />
@@ -71,7 +71,7 @@ export default function HeroSection() {
             e.preventDefault();
             document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="text-gray-400 hover:text-pink-500 transition-colors"
+          className="text-muted-foreground hover:text-primary transition-colors"
           data-testid="social-portfolio"
         >
           <ExternalLink className="w-6 h-6" />
