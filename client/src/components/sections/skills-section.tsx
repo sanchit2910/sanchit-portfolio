@@ -11,52 +11,52 @@ import {
 
 const skills = [
   {
-    name: "Android",
-    description: "Kotlin & Java",
+    name: "Kotlin",
+    description: "Primary Language",
     icon: Smartphone,
     color: "primary"
   },
   {
-    name: "Firebase",
-    description: "Backend Services",
-    icon: Zap,
-    color: "accent"
-  },
-  {
-    name: "Android SDK",
-    description: "Native Development",
+    name: "Java",
+    description: "Android Development",
     icon: Code,
     color: "primary"
   },
   {
-    name: "API Integration",
-    description: "REST & GraphQL",
+    name: "Android SDK",
+    description: "Jetpack Components",
+    icon: Settings,
+    color: "accent"
+  },
+  {
+    name: "MVVM Architecture",
+    description: "Clean Architecture",
+    icon: Zap,
+    color: "primary"
+  },
+  {
+    name: "Room Database",
+    description: "Offline-first Apps",
+    icon: Database,
+    color: "accent"
+  },
+  {
+    name: "Firebase",
+    description: "Auth & Firestore",
+    icon: Server,
+    color: "primary"
+  },
+  {
+    name: "RESTful APIs",
+    description: "API Integration",
     icon: Globe,
     color: "accent"
   },
   {
     name: "Angular",
-    description: "Frontend Framework",
-    icon: Settings,
-    color: "primary"
-  },
-  {
-    name: "ASP.NET MVC",
     description: "Web Development",
-    icon: Server,
-    color: "accent"
-  },
-  {
-    name: "MS SQL Server",
-    description: "Database Management",
-    icon: Database,
-    color: "primary"
-  },
-  {
-    name: "Google Maps",
-    description: "Location Services",
     icon: Map,
-    color: "accent"
+    color: "primary"
   }
 ];
 

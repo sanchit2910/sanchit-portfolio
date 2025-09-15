@@ -4,22 +4,31 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    title: "GMDC PARIVAHAN",
-    description: "Developed a comprehensive transport management application using Kotlin, designed to streamline vehicle allotment and operations for GMDC employees, guests, drivers, and administrators. Collaborated with a cross-functional team to integrate APIs for real-time vehicle availability, booking, and driver attendance. Key features include guest transportation, cost management, maintenance scheduling, and detailed efficiency metrics, enhancing transparency and operational efficiency.",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-    imageAlt: "Transport management application showing vehicle tracking and booking interface",
+    title: "Sysma – Asset Management App",
+    description: "Designed and launched an AI-powered manufacturing app to improve Overall Equipment Efficiency (OEE) by 25%. Implemented MVVM with offline-first Room Database, ensuring uninterrupted functionality without internet. Integrated REST APIs for equipment analytics, reporting, and predictive maintenance. Streamlined app performance, reducing APK size by 20% and supporting multiple user profiles for industrial environments.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    imageAlt: "AI-powered asset management application showing equipment efficiency dashboard",
     primaryTech: "Kotlin",
-    technologies: ["Kotlin", "API Integration", "Real-time Tracking", "Cost Management"],
+    technologies: ["Kotlin", "MVVM", "Room Database", "REST APIs", "AI Analytics"],
     color: "primary"
   },
   {
-    title: "Referr",
-    description: "Developed an Android application based on a refer and earn platform, demonstrating proficiency in Java programming and utilizing Firebase as the backend platform. Built during internship period with focus on user authentication, referral tracking, and secure data management.",
+    title: "GMDC Parivahan – Transport Management",
+    description: "Engineered a transport management app in Kotlin, automating vehicle allotment and driver scheduling. Integrated APIs for real-time vehicle booking, driver attendance, and cost tracking, enhancing transparency by 30%. Introduced maintenance scheduling and reporting features, improving fleet efficiency by 25%. Partnered with cross-functional teams to deploy the app for 500+ daily users with minimal downtime.",
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+    imageAlt: "Transport management application showing vehicle tracking and booking interface",
+    primaryTech: "Kotlin",
+    technologies: ["Kotlin", "Real-time APIs", "Fleet Management", "Driver Scheduling"],
+    color: "accent"
+  },
+  {
+    title: "Referr – Refer-and-Earn Platform",
+    description: "Developed an Android referral app using Java and Firebase, increasing referral-based signups by 40%. Implemented Firebase Authentication and Firestore for secure login and scalable data storage. Improved app performance by reducing API call failures by 20%, improving overall reliability. Delivered an intuitive UI that boosted average session time by 25%.",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
     imageAlt: "Refer and earn mobile application showing reward system interface",
     primaryTech: "Java",
-    technologies: ["Java", "Firebase", "Authentication", "Referral System"],
-    color: "accent"
+    technologies: ["Java", "Firebase", "Authentication", "Performance Optimization"],
+    color: "primary"
   }
 ];
 
