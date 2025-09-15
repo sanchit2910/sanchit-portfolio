@@ -1,25 +1,25 @@
 /* CSS Custom Properties for Theme System */
 :root {
-  /* Light theme colors */
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222, 47%, 11%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 47%, 11%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 47%, 11%);
-  --primary: hsl(221, 83%, 53%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(222, 47%, 11%);
-  --muted: hsl(210, 40%, 96%);
-  --muted-foreground: hsl(215, 16%, 47%);
-  --accent: hsl(142, 71%, 45%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --ring: hsl(221, 83%, 53%);
+  /* Light theme colors - HSL triplets for modern CSS usage */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 142 71% 45%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
   
   /* Font families */
   --font-sans: "Inter", system-ui, sans-serif;
@@ -33,25 +33,25 @@
 
 /* Dark theme colors */
 [data-theme="dark"] {
-  --background: hsl(222, 47%, 11%);
-  --foreground: hsl(213, 31%, 91%);
-  --card: hsl(217, 33%, 17%);
-  --card-foreground: hsl(213, 31%, 91%);
-  --popover: hsl(217, 33%, 17%);
-  --popover-foreground: hsl(213, 31%, 91%);
-  --primary: hsl(221, 83%, 53%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(217, 33%, 17%);
-  --secondary-foreground: hsl(213, 31%, 91%);
-  --muted: hsl(217, 33%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --accent: hsl(142, 71%, 45%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 33%, 17%);
-  --input: hsl(217, 33%, 17%);
-  --ring: hsl(221, 83%, 53%);
+  --background: 222 47% 11%;
+  --foreground: 213 31% 91%;
+  --card: 217 33% 17%;
+  --card-foreground: 213 31% 91%;
+  --popover: 217 33% 17%;
+  --popover-foreground: 213 31% 91%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 213 31% 91%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 142 71% 45%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 221 83% 53%;
 }
 
 /* Base styles */
@@ -68,8 +68,8 @@ html {
 body {
   font-family: var(--font-sans);
   line-height: 1.6;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -93,7 +93,7 @@ a {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -106,9 +106,9 @@ a {
   left: 0;
   right: 0;
   z-index: 50;
-  background-color: rgba(var(--background-rgb), 0.8);
+  background-color: hsl(var(--background) / 0.8);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid hsl(var(--border));
   transition: all 0.3s ease;
 }
 
@@ -133,7 +133,7 @@ a {
 }
 
 .nav-link {
-  color: var(--foreground);
+  color: hsl(var(--foreground));
   transition: color 0.3s ease;
   padding: 0.5rem 0;
   position: relative;
@@ -141,7 +141,7 @@ a {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--primary);
+  color: hsl(var(--primary));
 }
 
 .nav-link.active::after {
@@ -151,13 +151,13 @@ a {
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--primary);
+  background-color: hsl(var(--primary));
 }
 
 .theme-toggle {
   background: none;
   border: none;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -171,7 +171,7 @@ a {
 }
 
 .theme-toggle:hover {
-  background-color: var(--muted);
+  background-color: hsl(var(--muted));
 }
 
 .theme-toggle .icon-sun,
@@ -208,7 +208,7 @@ a {
   justify-content: center;
   background: none;
   border: none;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -244,8 +244,8 @@ a {
   display: none;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--background);
-  border-top: 1px solid var(--border);
+  background-color: hsl(var(--background));
+  border-top: 1px solid hsl(var(--border));
 }
 
 .nav-mobile.active {
@@ -254,13 +254,13 @@ a {
 
 .nav-link-mobile {
   padding: 1rem 0;
-  color: var(--foreground);
-  border-bottom: 1px solid var(--border);
+  color: hsl(var(--foreground));
+  border-bottom: 1px solid hsl(var(--border));
   transition: color 0.3s ease;
 }
 
 .nav-link-mobile:hover {
-  color: var(--primary);
+  color: hsl(var(--primary));
 }
 
 .nav-link-mobile:last-child {
@@ -281,11 +281,11 @@ a {
 /* Hero background - Light mode */
 .hero-section {
   background: linear-gradient(135deg, 
-    var(--background) 0%, 
-    var(--muted) 25%, 
-    var(--secondary) 50%, 
-    var(--muted) 75%, 
-    var(--background) 100%);
+    hsl(var(--background)) 0%, 
+    hsl(var(--muted)) 25%, 
+    hsl(var(--secondary)) 50%, 
+    hsl(var(--muted)) 75%, 
+    hsl(var(--background)) 100%);
 }
 
 /* Hero background - Dark mode */
@@ -311,17 +311,17 @@ a {
 /* Light mode overlay */
 .hero-section::before {
   background-image: 
-    radial-gradient(circle at 20% 30%, hsla(var(--primary), 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, hsla(var(--accent), 0.06) 0%, transparent 35%),
-    radial-gradient(circle at 40% 80%, hsla(var(--primary), 0.04) 0%, transparent 30%);
+    radial-gradient(circle at 20% 30%, hsl(221 83% 53% / 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, hsl(142 71% 45% / 0.06) 0%, transparent 35%),
+    radial-gradient(circle at 40% 80%, hsl(221 83% 53% / 0.04) 0%, transparent 30%);
 }
 
 /* Dark mode overlay */
 [data-theme="dark"] .hero-section::before {
   background-image: 
-    radial-gradient(circle at 20% 30%, hsla(var(--primary), 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, hsla(var(--accent), 0.12) 0%, transparent 35%),
-    radial-gradient(circle at 40% 80%, hsla(var(--primary), 0.08) 0%, transparent 30%);
+    radial-gradient(circle at 20% 30%, hsl(221 83% 53% / 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, hsl(142 71% 45% / 0.12) 0%, transparent 35%),
+    radial-gradient(circle at 40% 80%, hsl(221 83% 53% / 0.08) 0%, transparent 30%);
 }
 
 .hero-content {
@@ -344,7 +344,7 @@ a {
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: hsl(var(--primary));
   font-size: 1.125rem;
   margin-bottom: 1.5rem;
 }
@@ -354,7 +354,7 @@ a {
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 0.95;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
@@ -364,7 +364,7 @@ a {
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   font-size: 0.875rem;
   max-width: 48rem;
   margin: 0 auto 1.5rem;
@@ -383,12 +383,12 @@ a {
 }
 
 .social-link {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: var(--primary);
+  color: hsl(var(--primary));
 }
 
 .social-link svg {
@@ -415,23 +415,23 @@ a {
 }
 
 .btn-outline {
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  border: 2px solid hsl(var(--primary));
+  color: hsl(var(--primary));
   background: transparent;
 }
 
 .btn-outline:hover {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
 .btn-primary:hover {
-  background-color: hsl(from var(--primary) h s calc(l - 5%));
+  background-color: hsl(var(--primary) / 0.9);
 }
 
 .btn-full {
@@ -458,17 +458,17 @@ a {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
 }
 
 .section-subtitle {
   font-size: 1.125rem;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 /* About section */
 .about-section {
-  background-color: var(--card);
+  background-color: hsl(var(--card));
 }
 
 .about-content {
@@ -489,7 +489,7 @@ a {
   height: 8rem;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--background);
+  border: 4px solid hsl(var(--background));
 }
 
 .about-text {
@@ -501,14 +501,14 @@ a {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--card-foreground);
+  color: hsl(var(--card-foreground));
 }
 
 .about-role {
   font-size: 1.125rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 .about-location {
@@ -517,7 +517,7 @@ a {
   justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 .location-icon {
@@ -526,7 +526,7 @@ a {
 }
 
 .about-description {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   line-height: 1.7;
   margin-bottom: 1rem;
   max-width: 48rem;
@@ -546,17 +546,17 @@ a {
 }
 
 .skill-card {
-  background-color: var(--card);
+  background-color: hsl(var(--card));
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .skill-card:hover {
-  border-color: hsla(var(--primary), 0.5);
-  box-shadow: 0 10px 25px hsla(var(--primary), 0.1);
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 10px 25px hsl(var(--primary) / 0.1);
 }
 
 .skill-icon {
@@ -571,21 +571,21 @@ a {
 }
 
 .skill-card.primary .skill-icon {
-  background-color: hsla(var(--primary), 0.1);
-  color: var(--primary);
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
 }
 
 .skill-card.primary:hover .skill-icon {
-  background-color: hsla(var(--primary), 0.2);
+  background-color: hsl(var(--primary) / 0.2);
 }
 
 .skill-card.accent .skill-icon {
-  background-color: hsla(var(--accent), 0.1);
-  color: var(--accent);
+  background-color: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
 }
 
 .skill-card.accent:hover .skill-icon {
-  background-color: hsla(var(--accent), 0.2);
+  background-color: hsl(var(--accent) / 0.2);
 }
 
 .skill-icon svg {
@@ -595,18 +595,18 @@ a {
 
 .skill-name {
   font-weight: 600;
-  color: var(--card-foreground);
+  color: hsl(var(--card-foreground));
   margin-bottom: 0.5rem;
 }
 
 .skill-description {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 /* Experience section */
 .experience-section {
-  background-color: hsla(var(--secondary), 0.3);
+  background-color: hsl(var(--secondary) / 0.3);
 }
 
 .experience-timeline {
@@ -621,7 +621,7 @@ a {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: var(--border);
+  background-color: hsl(var(--border));
 }
 
 .experience-item {
@@ -644,19 +644,19 @@ a {
 }
 
 .experience-icon.primary {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
 .experience-icon.accent {
-  background-color: var(--accent);
-  color: var(--accent-foreground);
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
 }
 
 .experience-icon.secondary {
-  background-color: var(--secondary);
-  color: var(--foreground);
-  border: 2px solid var(--border);
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--foreground));
+  border: 2px solid hsl(var(--border));
 }
 
 .experience-icon svg {
@@ -679,35 +679,35 @@ a {
 }
 
 .experience-period.primary {
-  background-color: hsla(var(--primary), 0.1);
-  color: var(--primary);
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
 }
 
 .experience-period.accent {
-  background-color: hsla(var(--accent), 0.1);
-  color: var(--accent);
+  background-color: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
 }
 
 .experience-period.secondary {
-  background-color: var(--secondary);
-  color: var(--foreground);
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--foreground));
 }
 
 .experience-title {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
 }
 
 .experience-company {
   font-weight: 600;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   margin-bottom: 1rem;
 }
 
 .experience-description {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   line-height: 1.7;
 }
 
@@ -720,15 +720,15 @@ a {
 }
 
 .project-card {
-  background-color: var(--card);
+  background-color: hsl(var(--card));
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 20px 40px hsla(var(--primary), 0.1);
+  box-shadow: 0 20px 40px hsl(var(--primary) / 0.1);
   transform: translateY(-4px);
 }
 
@@ -763,24 +763,24 @@ a {
 }
 
 .project-tech-badge.primary {
-  background-color: hsla(var(--primary), 0.1);
-  color: var(--primary);
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
 }
 
 .project-tech-badge.accent {
-  background-color: hsla(var(--accent), 0.1);
-  color: var(--accent);
+  background-color: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
 }
 
 .project-title {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--card-foreground);
+  color: hsl(var(--card-foreground));
 }
 
 .project-description {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
@@ -792,8 +792,8 @@ a {
 }
 
 .tech-tag {
-  background-color: var(--muted);
-  color: var(--muted-foreground);
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
@@ -801,7 +801,7 @@ a {
 
 /* Apps section */
 .apps-section {
-  background-color: hsla(var(--secondary), 0.3);
+  background-color: hsl(var(--secondary) / 0.3);
 }
 
 .apps-grid {
@@ -812,16 +812,16 @@ a {
 }
 
 .app-card {
-  background-color: var(--card);
+  background-color: hsl(var(--card));
   border-radius: 1rem;
   padding: 2rem;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .app-card:hover {
-  box-shadow: 0 20px 40px hsla(var(--primary), 0.1);
+  box-shadow: 0 20px 40px hsl(var(--primary) / 0.1);
 }
 
 .app-icon {
@@ -835,13 +835,13 @@ a {
 }
 
 .app-icon.primary {
-  background-color: hsla(var(--primary), 0.1);
-  color: var(--primary);
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
 }
 
 .app-icon.accent {
-  background-color: hsla(var(--accent), 0.1);
-  color: var(--accent);
+  background-color: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
 }
 
 .app-icon svg {
@@ -853,19 +853,19 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--card-foreground);
+  color: hsl(var(--card-foreground));
 }
 
 .app-subtitle {
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 .app-description {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
@@ -886,7 +886,7 @@ a {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
 }
 
 .contact-item {
@@ -906,13 +906,13 @@ a {
 }
 
 .contact-icon.primary {
-  background-color: hsla(var(--primary), 0.1);
-  color: var(--primary);
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
 }
 
 .contact-icon.accent {
-  background-color: hsla(var(--accent), 0.1);
-  color: var(--accent);
+  background-color: hsl(var(--accent) / 0.1);
+  color: hsl(var(--accent));
 }
 
 .contact-icon svg {
@@ -926,21 +926,21 @@ a {
 
 .contact-label {
   font-weight: 500;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
   margin-bottom: 0.25rem;
 }
 
 .contact-link {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   transition: color 0.3s ease;
 }
 
 .contact-link:hover {
-  color: var(--primary);
+  color: hsl(var(--primary));
 }
 
 .contact-text {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 .connect-section {
@@ -951,7 +951,7 @@ a {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: hsl(var(--foreground));
 }
 
 .connect-links {
@@ -962,18 +962,18 @@ a {
 .connect-link {
   width: 3rem;
   height: 3rem;
-  background-color: hsla(var(--primary), 0.1);
+  background-color: hsl(var(--primary) / 0.1);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
+  color: hsl(var(--primary));
   transition: all 0.3s ease;
 }
 
 .connect-link:hover {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
 }
 
 .connect-link svg {
@@ -983,17 +983,17 @@ a {
 
 /* Contact form */
 .contact-form-wrapper {
-  background-color: var(--card);
+  background-color: hsl(var(--card));
   border-radius: 1rem;
   padding: 2rem;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
 }
 
 .contact-form-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
-  color: var(--card-foreground);
+  color: hsl(var(--card-foreground));
 }
 
 .contact-form {
@@ -1010,7 +1010,7 @@ a {
 .form-label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--card-foreground);
+  color: hsl(var(--card-foreground));
   margin-bottom: 0.5rem;
 }
 
@@ -1018,10 +1018,10 @@ a {
 .form-textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid var(--border);
+  border: 1px solid hsl(var(--border));
   border-radius: 0.5rem;
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
   font-size: 0.875rem;
   transition: all 0.3s ease;
 }
@@ -1029,8 +1029,8 @@ a {
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 2px hsla(var(--primary), 0.2);
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
 }
 
 .form-textarea {
@@ -1040,14 +1040,14 @@ a {
 
 .form-input::placeholder,
 .form-textarea::placeholder {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 /* Footer */
 .footer {
   padding: 3rem 0;
-  background-color: var(--card);
-  border-top: 1px solid var(--border);
+  background-color: hsl(var(--card));
+  border-top: 1px solid hsl(var(--border));
 }
 
 .footer-content {
@@ -1070,7 +1070,7 @@ a {
 }
 
 .footer-tagline {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 .footer-social {
@@ -1079,12 +1079,12 @@ a {
 }
 
 .footer-link {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
   transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  color: var(--primary);
+  color: hsl(var(--primary));
 }
 
 .footer-link svg {
@@ -1094,12 +1094,12 @@ a {
 
 .footer-bottom {
   padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid hsl(var(--border));
   text-align: center;
 }
 
 .footer-copyright {
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 /* Toast styles */
@@ -1114,32 +1114,32 @@ a {
 }
 
 .toast {
-  background-color: var(--card);
-  border: 1px solid var(--border);
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
-  box-shadow: 0 10px 25px hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 10px 25px hsl(0 0% 0% / 0.1);
   min-width: 20rem;
   animation: slideIn 0.3s ease;
 }
 
 .toast.success {
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid hsl(var(--accent));
 }
 
 .toast.error {
-  border-left: 4px solid var(--destructive);
+  border-left: 4px solid hsl(var(--destructive));
 }
 
 .toast-title {
   font-weight: 600;
-  color: var(--card-foreground);
+  color: hsl(var(--card-foreground));
   margin-bottom: 0.25rem;
 }
 
 .toast-description {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: hsl(var(--muted-foreground));
 }
 
 /* Animations */
